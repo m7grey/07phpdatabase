@@ -36,8 +36,10 @@ $sql = "SELECT id, firstname, age, lastname
         FROM employees
         where $where
         ORDER by lastname";
-$result = $conn->query($sql);
+echo $sql;
 
+$result = $conn->query($sql);
+echo '<hr>';
 if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
