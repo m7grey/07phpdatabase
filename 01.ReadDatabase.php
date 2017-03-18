@@ -1,4 +1,5 @@
 <?php
+//filename:function-library.php
 include "function-library.php";
 
 $servername = "localhost";
@@ -16,7 +17,8 @@ if ($conn->connect_error) {
 //url 01.readdatabase.php
 //url 01.readdatabase.php?lastname=J&age32
 
-$lname = "";
+$lname = getOption("lastname", '');
+$age = getOption("age", 0);
 if (isset($_GET["lastname"])) {
     $lname = $_GET["lastname"];
 }
@@ -28,6 +30,7 @@ if ($lname == "") {
     $where = "lastname like '$lname%'";
 }
 
+$where = $where . " AND age >=$age";
 
 $sql = "SELECT id, firstname, age, lastname 
         FROM employees
