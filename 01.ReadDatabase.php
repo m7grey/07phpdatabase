@@ -1,4 +1,5 @@
 <?php
+include "function-library.php";
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -12,13 +13,19 @@ if ($conn->connect_error) {
 }
 //url 01.readdatabase.php?lastname=J
 //url 01.readdatabase.php
+//url 01.readdatabase.php?lastname=J&age32
 
 $lname= "";
 if (isset($_GET["lastname"])) {
     $lname = $_GET["lastname"];
 }
 
-$where = "lastname like '$lname%'";
+
+if($lname ==""){
+    $where = "1 = 1";
+}else{
+    $where = "lastname like '$lname%'";
+}
 
 
 $sql = "SELECT id, firstname, age, lastname 
