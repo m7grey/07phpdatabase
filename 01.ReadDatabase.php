@@ -19,10 +19,12 @@ if ($conn->connect_error) {
 
 $lname = getOption("lastname", '');
 $age = getOption("age", 0);
+$salary = getOption("salary", 0);
 if (isset($_GET["lastname"])) {
     $lname = $_GET["lastname"];
 }
-
+// Display Project salary field add salary as a parameter;  &salary=40000
+// example the folowing parameter will display data greater
 
 if ($lname == "") {
     $where = "1 = 1";
@@ -30,9 +32,9 @@ if ($lname == "") {
     $where = "lastname like '$lname%'";
 }
 
-$where = $where . " AND age >=$age";
+$where = $where . " AND age >=$age AND salary >=$salary";
 
-$sql = "SELECT id, firstname, age, lastname 
+$sql = "SELECT id, firstname, age, lastname, salary
         FROM employees
         where $where
         ORDER by lastname";
@@ -50,6 +52,8 @@ if ($result->num_rows > 0) {
             . $row["lastname"]
             . " "
             . $row["age"]
+            . " "
+            . $row["salary"]
             . "<br>";
     }
 } else {
