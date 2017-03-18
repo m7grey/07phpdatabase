@@ -13,12 +13,14 @@ if ($conn->connect_error) {
 //url 01.readdatabase.php?lastname=J
 //url 01.readdatabase.php
 
-$lname = "All";
-if (isset($_GET["lastname"])){
+$lname= "";
+if (isset($_GET["lastname"])) {
     $lname = $_GET["lastname"];
 }
 
-$where = "lastname LIKE '$lname%'";
+$where = "lastname like '$lname%'";
+
+
 $sql = "SELECT id, firstname, age, lastname 
         FROM employees
         where $where
@@ -27,15 +29,15 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"]
-                    . " - Name: "
-                    . $row["firstname"]
-                    . " "
-                    . $row["lastname"]
-                    . " "
-                    . $row["age"]
-                    ."<br>";
+            . " - Name: "
+            . $row["firstname"]
+            . " "
+            . $row["lastname"]
+            . " "
+            . $row["age"]
+            . "<br>";
     }
 } else {
     echo "0 results";
