@@ -31,3 +31,8 @@ span.col1, span.col2 {
 span.col1 {
     width: 150px;
 }
+
+span.broke {
+    background-color: rgb(238,28,36);
+    color: white;
+}
