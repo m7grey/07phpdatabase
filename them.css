@@ -1,20 +1,33 @@
 /*File name them.css*/
-*{
+* {
     font-family: "Verdana", sans-serif;
     font-size: 10pt;
 }
-div.row{
+
+div.row {
     float: left;
     /*border: solid 1px black;*/
-    width:254px;
+    width: 260px;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    font-size: 10pt;
 
 }
-span.col1, span.col2{
+
+h1 {
+    font-size: 200%;
+}
+
+span.col1, span.col2 {
     display: inline-block;
     border: solid 1px black;
     width: 100px;
     float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 1px;
 }
-span.col1{
+
+span.col1 {
     width: 150px;
 }
