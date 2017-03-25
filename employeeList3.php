@@ -62,7 +62,10 @@ if ($result->num_rows > 0) {
         ?>
         <div class="row">
             <span class="col1"><?= $row["lastname"] .",". $row["firstname"] ?></span>
-            <span class="col2 <?=$broke ?>"><?= $row["salary"] ?></span>
+            <span class="col2">
+            <img src=start.png style="width: 10px;
+            height: 10px;">
+            </span>
 
 
         </div>

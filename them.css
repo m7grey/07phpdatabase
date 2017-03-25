@@ -22,6 +22,7 @@ span.col1, span.col2 {
     display: inline-block;
     border: solid 1px black;
     width: 100px;
+    height:14px;
     float: left;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -36,3 +37,9 @@ span.broke {
     background-color: rgb(238,28,36);
     color: white;
 }
+
+/*img{*/
+    /*background-image: url("start.png");*/
+    /*width:10px;*/
+    /*height: 10px;*/
+/*}*/
