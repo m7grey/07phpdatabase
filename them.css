@@ -5,8 +5,8 @@
 }
 div.row{
     float: left;
-    border: solid 1px black;
-    width:260px;
+    /*border: solid 1px black;*/
+    width:254px;
 
 }
 span.col1, span.col2{
