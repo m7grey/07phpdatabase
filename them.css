@@ -1,0 +1,20 @@
+/*File name them.css*/
+*{
+    font-family: "Verdana", sans-serif;
+    font-size: 10pt;
+}
+div.row{
+    float: left;
+    border: solid 1px black;
+    width:260px;
+
+}
+span.col1, span.col2{
+    display: inline-block;
+    border: solid 1px black;
+    width: 100px;
+    float: left;
+}
+span.col1{
+    width: 150px;
+}
